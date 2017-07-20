@@ -1,3 +1,11 @@
 Here's your API Key for the Top Stories: 
 
 b8f61cd26d6e4984b772baf23c335f26
+
+
+
+    curl --head https://api.nytimes.com/svc/books/v3/lists/overview.json?api-key=<your-api-key> 2>/dev/null | grep -i "X-RateLimit"
+    X-RateLimit-Limit-day: 1000
+    X-RateLimit-Limit-second: 5
+    X-RateLimit-Remaining-day: 180
+    X-RateLimit-Remaining-second: 5

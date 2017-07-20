@@ -3,7 +3,32 @@ var gulp = require('gulp'),
     rename = require('gulp-rename'),
     watch = require('gulp-watch'),
     eslint = require('gulp-eslint'),
-    browserSync = require('browser-sync').create();
+    browserSync = require('browser-sync').create(),
+    sass = require('gulp-sass'),
+    autoprefixer = require('gulp-autoprefixer'),
+    cssnano = require('gulp-cssnano'),
+    prettyError = require('gulp-prettyerror');
+
+
+
+gulp.task('sass', function() {
+   gulp.src('./sass/style.scss')
+      .pipe(prettyError()) // ADD THIS LINE
+      .pipe(sass())
+      .pipe(autoprefixer({
+         browsers: ['last 2 versions']
+      }))
+      .pipe(gulp.dest('./build/css'))
+      .pipe(cssnano())
+      .pipe(rename('style.min.css'))
+      .pipe(gulp.dest('./build/css'));
+});
+
+
+
+
+//                          CSS/SASS functions
+
 
 
 
@@ -21,11 +46,19 @@ gulp.task('scripts', ['lint'], function(){
   .pipe(gulp.dest('./build/js'))
 });
 
+
+
+//                          JS functions
+
+
+
+
 gulp.task('watch', function() {
    gulp.watch('js/*.js', ['scripts']);    // add if you want to run more "scripts"
+   gulp.watch('sass/*.scss', ['sass']);
 });
 
-gulp.watch('build/js/*.js').on('change', browserSync.reload);
+
 
 
 gulp.task('browser-sync', function() {
@@ -34,6 +67,8 @@ gulp.task('browser-sync', function() {
             baseDir: "./"
         }
     });
+
+    gulp.watch(['build/js/*.js', 'build/css/*.css']).on('change', browserSync.reload);
 });
 
 
