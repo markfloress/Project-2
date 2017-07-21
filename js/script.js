@@ -1,24 +1,9 @@
-// $("#album-search").on('submit', function(){
-//   var name = $('#artist-name').val().replace(' '+'+');
-//   var site = 'https://itunes.apple.com/search?entity=album&limit=6&term=' + name;
-  
-//   $.ajax({
-//     method: 'GET',
-//     dataType: 'jsonp',
-//     url: site
-//     }) 
-  
-//   .done(function(data) {
-//     $.each(data.results, function( key, value ){
-//       $('.album-list').append('<li><img src=' + value.artworkUrl60 + '/>' + value.collectionName + "</li>");
-//     });
-//   });
-// });
-
-
-
+$(document).ready(function(){
 $( "select" ).change(function() {
-  $( "select option:selected" ).each(function() {
+  $( "select option:selected" ).each(function(){
+    $('.logo').addClass('nyt');
+    $('.top').addClass('header11');
+    $('.footext').addClass('footer2').removeClass('footext');
     var url = "https://api.nytimes.com/svc/topstories/v2/";
     url += $(this).val();
     url += '.json';
@@ -32,15 +17,21 @@ $( "select" ).change(function() {
     })
     
     .done(function(data) {
-          $('.story').remove();
-      var newstory;
+          $('.list').remove();
+      var newstory = '';
+      var count = 0;
       $.each(data.results, function(key, value){
         if(value.multimedia.length>0){
-          newstory += '<li class="story" style="background-image:url('+value.multimedia[4].url+')">';
+          if(count < 12){
+          newstory += '<li class="list">';
           newstory += '<a href="' +value.url+ '">';
-          newstory += '<p>' +value.abstract+ '</p>';
+          newstory += '<div class="story" style="background-image:url('+value.multimedia[4].url+')">';
+          newstory += '</div>';
           newstory += '</a>';
+          newstory += '<p class="description">' +value.abstract+ '</p>';
           newstory += '</li>';
+          count++;
+        }
         }
       });
         $('.articles').append(newstory);
@@ -50,3 +41,11 @@ $( "select" ).change(function() {
     });
   });
 });
+
+$('.list').mouseover(function() {
+   $('.description').addClass('abstract');
+});
+
+// filter, make an array, use slice
+
+})

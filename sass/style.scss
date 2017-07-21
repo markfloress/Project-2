@@ -57,11 +57,25 @@ body{
 
 header{
   height: 670px;
+  transition: all 1.0s ease 0.1s
 }
+
+.header11{
+  height: 300px;
+  background-color: black;
+}
+
 /*              main styles              */
 
 .logo{
   padding-top: 180px;
+  height: 300px;
+  transition: all 1.0s ease 0.1s
+}
+
+.nyt{
+  height: 150px;
+  padding-top: 35px;
 }
 
 header p{
@@ -79,15 +93,42 @@ ul{
 }
 
 .story {
-  width: 400px;
-  height: 400px;
+  width: 100%;
+  height: 420px;
   background-size: cover;
+  background-position: center;
+}
+
+.list{
+  position: relative;
+}
+
+.description{
+  width: 100%;
+  color: white;
+  position: absolute;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.65);
+  bottom: -35%;
+  height: 35%;
+  transition: bottom 0.40s ease-in-out 0s;
+}
+
+.list:hover{
+  .description{
+  bottom:0;
+  }
 }
 
 /*             selection style             */
 
-footer p{
+.footext{
+  color: #c2c2c2;
+}
 
+.footer2{
+  margin-bottom: 50px;
+  margin-top: 30px;
   color: #c2c2c2;
 }
 
@@ -96,3 +137,12 @@ span{
 }
 
 /*                 footer style                */
+
+// 1st breakpoint on 480
+// 2nd 600
+// 3rd 1000
+
+@media only screen and (min-width:480px){
+
+
+}
