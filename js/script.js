@@ -31,16 +31,22 @@ $( "select" ).change(function() {
       method: 'GET',
     })
     
-    .done(function(result) {
-      console.log(result);
-    })
-    
+    .done(function(data) {
+          $('.story').remove();
+      var newstory;
+      $.each(data.results, function(key, value){
+        if(value.multimedia.length>0){
+          newstory += '<li class="story" style="background-image:url('+value.multimedia[4].url+')">';
+          newstory += '<a href="' +value.url+ '">';
+          newstory += '<p>' +value.abstract+ '</p>';
+          newstory += '</a>';
+          newstory += '</li>';
+        }
+      });
+        $('.articles').append(newstory);
+      })
     .fail(function(err) {
       throw err;
     });
   });
 });
-
-
-
-

@@ -66,6 +66,14 @@ header p {
   width: 140px;
   height: 30px; }
 
+ul {
+  width: 100%; }
+
+.story {
+  width: 400px;
+  height: 400px;
+  background-size: cover; }
+
 /*             selection style             */
 footer p {
   color: #c2c2c2; }
