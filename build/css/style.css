@@ -92,6 +92,7 @@ ul {
   position: relative; }
 
 .description {
+  display: none;
   width: 100%;
   color: white;
   position: absolute;
@@ -104,6 +105,7 @@ ul {
   transition: bottom 0.40s ease-in-out 0s; }
 
 .list:hover .description {
+  display: block;
   bottom: 0; }
 
 /*             selection style             */
@@ -118,6 +120,17 @@ ul {
 span {
   text-transform: uppercase; }
 
+.loader {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 150px;
+  width: 150px; }
+
+.container.load .loader {
+  display: block; }
+
 /*                 footer style                */
 @media only screen and (min-width: 480px) {
   .logo {
@@ -130,8 +143,12 @@ span {
     width: 50%;
     display: inline-block; }
   .description {
-    width: 100%;
-    padding: 0 5px; } }
+    width: 100%; }
+  .loader {
+    height: 100px;
+    width: 100px;
+    top: 10%;
+    left: 10%; } }
 
 @media only screen and (min-width: 600px) {
   .top {
@@ -145,6 +162,11 @@ span {
         -ms-flex-align: center;
             align-items: center;
     text-align: left; }
+  .header11 {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    padding-left: 100px; }
   .section {
     padding-left: 20px; }
     .section p {
@@ -156,7 +178,13 @@ span {
     height: 70px;
     padding-right: 60px; }
   .header11 {
-    height: 135px; } }
+    height: 135px; }
+  .loader {
+    position: fixed;
+    height: 130px;
+    width: 130px;
+    top: 0;
+    left: 70px; } }
 
 @media only screen and (min-width: 1000px) {
   .logo {
@@ -175,4 +203,6 @@ span {
     height: 70px; }
   .footer2 {
     text-align: left;
-    padding-left: 50px; } }
+    padding-left: 50px; }
+  .loader {
+    left: 120px; } }

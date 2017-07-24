@@ -118,6 +118,7 @@ ul{
 }
 
 .description{
+  display: none;
   width: 100%;
   color: white;
   position: absolute;
@@ -131,6 +132,7 @@ ul{
 
 .list:hover{
   .description{
+  display: block;
   bottom:0;
   }
 }
@@ -149,6 +151,19 @@ ul{
 
 span{
   text-transform: uppercase;
+}
+
+.loader{
+  display:    none;
+  position:   fixed;
+  top: 0;
+  left: 0;
+  height: 150px;
+  width: 150px;
+}
+
+.container.load .loader{
+    display: block;
 }
 
 /*                 footer style                */
@@ -177,7 +192,13 @@ span{
 
   .description{
     width: 100%;
-    padding: 0 5px;
+  }
+
+  .loader{
+    height: 100px;
+    width: 100px;
+    top: 10%;
+    left: 10%;
   }
 }
 
@@ -188,6 +209,11 @@ span{
     justify-content: center;
     align-items: center;
     text-align: left;
+  }
+
+  .header11{
+    justify-content: flex-start;
+    padding-left: 100px;
   }
 
   .section{
@@ -210,6 +236,14 @@ span{
 
   .header11{
     height: 135px;
+  }
+
+  .loader{
+    position: fixed;
+    height: 130px;
+    width: 130px;
+    top: 0;
+    left: 70px;
   }
 }
 
@@ -239,5 +273,9 @@ span{
   .footer2{
     text-align: left;
     padding-left: 50px;
+  }
+
+  .loader{
+    left: 120px;
   }
 }

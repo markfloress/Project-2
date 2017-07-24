@@ -1,9 +1,11 @@
 $(document).ready(function(){
 $( "select" ).change(function() {
   $( "select option:selected" ).each(function(){
+    $('.container').addClass("load");
     $('.logo').addClass('nyt');
     $('.top').addClass('header11');
     $('.footext').addClass('footer2').removeClass('footext');
+    
     var url = "https://api.nytimes.com/svc/topstories/v2/";
     url += $(this).val();
     url += '.json';
@@ -15,9 +17,10 @@ $( "select" ).change(function() {
       url: url,
       method: 'GET',
     })
-    
+ 
     .done(function(data) {
-          $('.list').remove();
+      $('.container').removeClass("load");
+      $('.list').remove();
       var newstory = '';
       var count = 0;
       $.each(data.results, function(key, value){
@@ -34,14 +37,21 @@ $( "select" ).change(function() {
         }
         }
       });
+      
         $('.articles').append(newstory);
       })
-    .fail(function(err) {
-      throw err;
-    });
+
   });
 });
 
 // filter, make an array, use slice
 // take selectric raw min and make new file
-})
+})  
+
+
+// if(('select option:selected').contains('Sections ...')){
+//         $('.logo').removeClass('nyt');
+//         $('.top').removeClass('header11');
+//         $('.footer2').addClass('footext').removeClass('footer2');
+//         $('.container').removeClass("load")
+//       }
