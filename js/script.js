@@ -24,7 +24,7 @@ $( "select" ).change(function() {
         if(value.multimedia.length>0){
           if(count < 12){
           newstory += '<li class="list">';
-          newstory += '<a href="' +value.url+ '">';
+          newstory += '<a href="' +value.url+ '" target="_blank">';
           newstory += '<div class="story" style="background-image:url('+value.multimedia[4].url+')">';
           newstory += '</div>';
           newstory += '</a>';
@@ -42,10 +42,6 @@ $( "select" ).change(function() {
   });
 });
 
-$('.list').mouseover(function() {
-   $('.description').addClass('abstract');
-});
-
 // filter, make an array, use slice
-
+// take selectric raw min and make new file
 })

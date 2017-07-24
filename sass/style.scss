@@ -41,6 +41,20 @@ table {
 	border-spacing: 0;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*                        end of reset                        */
 
 body{
@@ -55,7 +69,7 @@ body{
   font-size: 16px;
 }
 
-header{
+.top{
   height: 670px;
   transition: all 1.0s ease 0.1s
 }
@@ -107,7 +121,8 @@ ul{
   width: 100%;
   color: white;
   position: absolute;
-  text-align: center;
+  line-height: 30px;
+  text-align: left;
   background-color: rgba(0, 0, 0, 0.65);
   bottom: -35%;
   height: 35%;
@@ -143,6 +158,86 @@ span{
 // 3rd 1000
 
 @media only screen and (min-width:480px){
+  .logo{
+    height: 220px;
+  }
 
+  .nyt{
+    height: 150px;
+  }
 
+  .selector{
+    width: 200px;
+  }
+
+  .list{
+    width: 50%;
+    display: inline-block;
+  }
+
+  .description{
+    width: 100%;
+    padding: 0 5px;
+  }
+}
+
+@media only screen and (min-width:600px){
+  
+  .top{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+  }
+
+  .section{
+    padding-left: 20px;
+      
+    p {
+    margin-top: 0;
+    }
+  }
+
+  .logo{
+    height: 150px;
+    padding-top: 0;
+  }
+
+  .nyt{
+    height: 70px;
+    padding-right: 60px;
+  }
+
+  .header11{
+    height: 135px;
+  }
+}
+
+@media only screen and (min-width:1000px){
+  
+  .logo{
+    height: 220px;
+    padding-left: 50px;
+  }
+
+  .top{
+    justify-content: flex-start;
+  }
+
+  .footext{
+    text-align: left;
+    padding-left: 50px;
+  }
+  .list{
+    width: 25%;
+  }
+
+  .nyt{
+    height: 70px;
+  }
+
+  .footer2{
+    text-align: left;
+    padding-left: 50px;
+  }
 }
