@@ -8,7 +8,7 @@ $(document).ready(function(){
     $( "select option:selected" ).each(function(key, options){
       if(options.value != 'blank'){
         $('.container').addClass("load");
-        $('.logo').addClass('nyt');
+        $('.logo').addClass('nyt');5
         $('.top').addClass('header11');
         $('.footext').addClass('footer2').removeClass('footext');
         var url = "https://api.nytimes.com/svc/topstories/v2/";
@@ -53,7 +53,4 @@ $(document).ready(function(){
       }
   });
 });
-
-// filter, make an array, use slice
-
 })  

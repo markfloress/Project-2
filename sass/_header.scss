@@ -1,0 +1,142 @@
+.top{
+  height: 670px;
+  transition: all 1.0s ease 0.1s;
+
+  @include tablet{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+  }
+
+  @include desktop{
+    justify-content: flex-start;
+  }
+}
+
+.header11{
+  height: 300px;
+  background-color: $sub-color;
+
+  @include stretch{
+    justify-content: flex-start;
+  }
+
+  @include tablet{
+    height: 135px;
+  }
+}
+
+// header class style
+
+.logo{
+  padding-top: 180px;
+  height: 300px;
+  transition: all 1.0s ease 0.1s;
+
+  @include stretch{
+    height: 220px;
+  }
+
+  @include tablet{
+    height: 150px;
+    padding-top: 0;
+  }
+
+  @include desktop{
+    height: 220px;
+    padding-left: 50px;
+  }
+}
+
+.nyt{
+  height: 150px;
+  padding-top: 35px;
+
+  @include stretch{
+    height: 150px;
+  }
+
+  @include tablet{
+    height: 70px;
+    padding-left: 60px;
+    padding-top: 0;
+  }
+
+  @include desktop{
+    height: 70px;
+  }
+}
+
+// NYT logo style
+
+.loader{
+  display:    none;
+  position:   fixed;
+  top: 0;
+  left: 0;
+  height: 150px;
+  width: 150px;
+
+  @include stretch{
+    height: 100px;
+    width: 100px;
+    top: 10%;
+    left: 10%;
+  }
+
+  @include tablet{
+    position: fixed;
+    height: 130px;
+    width: 130px;
+    top: 0;
+    left: 30px;
+  }
+
+  @include desktop{
+    left: 30px;
+  }
+}
+
+.container.load .loader{
+    display: block;
+}
+
+// loader style
+
+
+.section{
+  color: $prime-color;
+  margin: 15px 0;
+  font-weight: 300;
+
+  @include tablet{
+     padding-left: 20px;
+      
+    p {
+    margin-top: 0;
+    }
+  }
+}
+
+
+.selection{
+  width: 60%;
+  margin: 0 auto;
+  padding-top: 10px;
+
+  @include tablet{
+    width: 100%;
+  }
+}
+
+.selector{
+  width: 140px;
+  height: 30px;
+
+  @include stretch{
+    // width: 100px;
+  }
+}
+
+// select option style

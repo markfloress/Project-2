@@ -1,0 +1,23 @@
+.footext{
+  color: $second-color;
+
+  @include desktop{
+    text-align: left;
+    padding-left: 50px;
+  }
+}
+
+.footer2{
+  margin-bottom: 50px;
+  margin-top: 30px;
+  color: $second-color;
+
+  @include desktop{
+    text-align: left;
+    padding-left: 50px;
+  }
+}
+
+span{
+  text-transform: uppercase;
+}
