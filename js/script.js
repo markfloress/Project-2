@@ -4,30 +4,30 @@ $(document).ready(function(){
   $('select').selectric();
 });
 
-  $( "select" ).change(function() {
-    $( "select option:selected" ).each(function(key, options){
-      if(options.value != 'blank'){
-        $('.container').addClass("load");
+  $( 'select' ).change(function() {
+    $( 'select option:selected' ).each(function(key, options){
+      if(options.value !== 'blank'){
+        $('.container').addClass('load');
         $('.logo').addClass('nyt');5
         $('.top').addClass('header11');
         $('.footext').addClass('footer2').removeClass('footext');
-        var url = "https://api.nytimes.com/svc/topstories/v2/";
+        let url = 'https://api.nytimes.com/svc/topstories/v2/';
         url += options.value;
         url += '.json';
         url += '?' + $.param({
-          'api-key': "b8f61cd26d6e4984b772baf23c335f26"
+          'api-key': 'b8f61cd26d6e4984b772baf23c335f26'
         });
 
         $.ajax({
           url: url,
           method: 'GET',
         })
-
+  
         .done(function(data) {
-          $('.container').removeClass("load");
+          $('.container').removeClass('load');
           $('.list').remove();
-          var newstory = '';
-          var count = 0;
+          let newstory = '';
+          let count = 0;
           $.each(data.results, function(key, value){
             if(value.multimedia.length>0){
               if(count < 12){
@@ -48,7 +48,7 @@ $(document).ready(function(){
         $('.logo').removeClass('nyt');
         $('.top').removeClass('header11');
         $('.footer2').addClass('footext').removeClass('footer2');
-        $('.container').removeClass("load");
+        $('.container').removeClass('load');
         $('.list').remove();
       }
   });

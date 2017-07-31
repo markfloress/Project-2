@@ -7,7 +7,8 @@ var gulp = require('gulp'),
     sass = require('gulp-sass'),
     autoprefixer = require('gulp-autoprefixer'),
     cssnano = require('gulp-cssnano'),
-    prettyError = require('gulp-prettyerror');
+    prettyError = require('gulp-prettyerror'),
+    babel = require('gulp-babel');
 
 
 
@@ -41,6 +42,9 @@ gulp.task('lint', () => {
 
 gulp.task('scripts', ['lint'], function(){
   gulp.src('js/**/*.js')
+  .pipe(babel({
+      presets: ['es2015']
+  }))
   .pipe(uglify())   //call the uglify
   .pipe(rename({ extname: '.min.js'}))   //rename the new file
   .pipe(gulp.dest('./build/js'))
@@ -50,6 +54,14 @@ gulp.task('scripts', ['lint'], function(){
 
 //                          JS functions
 
+
+gulp.task('default', () => {
+    return gulp.src('src/app.js')
+        .pipe(babel({
+            presets: ['es2015']
+        }))
+        .pipe(gulp.dest('dist'));
+});
 
 
 
