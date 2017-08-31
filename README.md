@@ -11,10 +11,18 @@ The website grabs the current news using the API from the New York Times and gen
 <li> The Jquery, Javascript and Ajax was the difficult part for me. I am getting familiar with using it, but I honestly still need to learn and practice it a lot to fully grasp and be efficient in my work.</li>
 </ul>
 
+<h3> Languages Used </h3>
+<ul>
+<li> Gulp / Webpack Task Managing Systems
+<li> HTML 5
+<li> CSS / SCSS
+<li> Javascript / Jquery
+</ul>
+
 <h3> Screenshots </h3>
 <p> Face of the website </p>
-<img src="https://user-images.githubusercontent.com/29613498/28557662-9ec4ea7c-70c2-11e7-9fa7-190ff8fe828c.png">
+![screencapture-file-users-mark-desktop-red-project02-index-html-1504208150214-min](https://user-images.githubusercontent.com/29613498/29942148-b75bcd72-8e49-11e7-8c21-c3383ec366bb.png)
 
 <p> Site after a topic is chosen </p>
 <p> Do note that I took on a stretch goal for the project, which is to hide the article description on the face of the list and viewing it simply by hovering on the article you wanted to read</p>
-<img src="https://user-images.githubusercontent.com/29613498/28557675-b5612502-70c2-11e7-9370-f4a7c73cdaef.png">
+![screencapture-file-users-mark-desktop-red-project02-index-html-1504208174769-min](https://user-images.githubusercontent.com/29613498/29942151-b86a33de-8e49-11e7-85e3-6c122d3c1100.png)
