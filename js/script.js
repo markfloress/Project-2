@@ -24,13 +24,13 @@ import '../sass/style.scss';
   
         .done((data) => {
           $('.container').removeClass('load');
-          $('.list').remove();
+          $('.news_list').remove();
           let newstory = ``;
           let count = 0;
           $.each(data.results, function(key, value){
             if(value.multimedia.length>0){
               if(count < 12){
-                newstory += `<li class='list'>`;
+                newstory += `<li class='news_list'>`;
                 newstory += `<a href='` +value.url+ `' target='_blank'>`;
                 newstory += `<div class='story' style='background-image:url(`+value.multimedia[4].url+`)'>`;
                 newstory += `</div>`;
@@ -48,7 +48,7 @@ import '../sass/style.scss';
         $('.header_class').removeClass('header_2nd-position');
         $('.footer2').addClass('footext').removeClass('footer2');
         $('.container').removeClass('load');
-        $('.list').remove();
+        $('.news_list').remove();
       }
   });
 });

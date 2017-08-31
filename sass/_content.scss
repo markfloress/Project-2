@@ -1,16 +1,15 @@
-
-ul{
+.articles{
   width: 100%;
+
+  .story {
+    width: 100%;
+    height: 420px;
+    background-size: cover;
+    background-position: center;
+  }
 }
 
-.story {
-  width: 100%;
-  height: 420px;
-  background-size: cover;
-  background-position: center;
-}
-
-.list{
+.news_list{
   position: relative;
   overflow: hidden;
 
@@ -42,7 +41,7 @@ ul{
   }
 }
 
-.list:hover{
+.news_list:hover{
   .description{
   bottom: 0;
   }
