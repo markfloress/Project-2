@@ -70,7 +70,7 @@
 
 // NYT logo style
 
-.loader{
+.svg-loader{
   display:    none;
   position:   fixed;
   top: 0;
@@ -98,7 +98,7 @@
   }
 }
 
-.container.load .loader{
+.container.load .svg-loader{
     display: block;
 }
 
