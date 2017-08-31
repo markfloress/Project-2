@@ -23,7 +23,6 @@ import '../sass/style.scss';
         })
   
         .done((data) => {
-          $('.container').removeClass('load');
           $('.news_list').remove();
           let newstory = ``;
           let count = 0;
@@ -42,6 +41,10 @@ import '../sass/style.scss';
             }
           });
             $('.articles').append(newstory);
+        }).fail(function(err){
+          console.log(err);
+        }).always(function(){
+          $('.container').removeClass('load');
         });
       }else{
         $('.nyt_logo').removeClass('nyt_2nd-position');
