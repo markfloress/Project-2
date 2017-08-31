@@ -11,7 +11,7 @@ import '../sass/style.scss';
     $( 'select option:selected' ).each((key, options) => {
       if(options.value !== 'blank'){
         $('.container').addClass('load');
-        $('.logo').addClass('nyt');5
+        $('.nyt_logo').addClass('nyt_2nd-position');
         $('.header_class').addClass('header_2nd-position');
         $('.footext').addClass('footer2').removeClass('footext');
         const api = `.json?api-key=b8f61cd26d6e4984b772baf23c335f26`;
@@ -44,7 +44,7 @@ import '../sass/style.scss';
             $('.articles').append(newstory);
         });
       }else{
-        $('.logo').removeClass('nyt');
+        $('.nyt_logo').removeClass('nyt_2nd-position');
         $('.header_class').removeClass('header_2nd-position');
         $('.footer2').addClass('footext').removeClass('footer2');
         $('.container').removeClass('load');
