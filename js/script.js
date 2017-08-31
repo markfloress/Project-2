@@ -35,7 +35,7 @@ import '../sass/style.scss';
                 newstory += `<div class='story' style='background-image:url(`+value.multimedia[4].url+`)'>`;
                 newstory += `</div>`;
                 newstory += `</a>`;
-                newstory += `<p class='description'>` +value.abstract+ `</p>`;
+                newstory += `<p class='news_description'>` +value.abstract+ `</p>`;
                 newstory += `</li>`;
                 count++;
               }
