@@ -1,9 +1,10 @@
 {
-  "name": "test",
+  "name": "Instanews",
   "version": "1.0.0",
-  "description": "",
+  "description": "Project02",
   "main": "webpack.config.js",
   "dependencies": {
+    "gulp": "^3.9.1",
     "web-dev-server": "^1.0.5"
   },
   "devDependencies": {

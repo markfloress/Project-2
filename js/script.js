@@ -3,9 +3,6 @@ import 'jquery-selectric';
 import '../sass/style.scss';
 
 
-
-$(document).ready(() => {
-
   $(function() {
   $('select').selectric();
 });
@@ -54,5 +51,4 @@ $(document).ready(() => {
         $('.list').remove();
       }
   });
-});
 });
