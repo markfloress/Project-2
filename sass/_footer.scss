@@ -1,5 +1,9 @@
-.footext{
+.footer_text{
   color: $second-color;
+
+  span{
+    text-transform: uppercase;
+  }
 
   @include desktop{
     text-align: left;
@@ -7,7 +11,7 @@
   }
 }
 
-.footer2{
+.footer_2nd-position{
   margin-bottom: 50px;
   margin-top: 30px;
   color: $second-color;
@@ -16,8 +20,4 @@
     text-align: left;
     padding-left: 50px;
   }
-}
-
-span{
-  text-transform: uppercase;
 }

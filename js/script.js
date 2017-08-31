@@ -13,7 +13,7 @@ import '../sass/style.scss';
         $('.container').addClass('load');
         $('.nyt_logo').addClass('nyt_2nd-position');
         $('.header_class').addClass('header_2nd-position');
-        $('.footext').addClass('footer2').removeClass('footext');
+        $('.footer_text').addClass('footer_2nd-position').removeClass('footer_text');
         const api = `.json?api-key=b8f61cd26d6e4984b772baf23c335f26`;
         const url = `https://api.nytimes.com/svc/topstories/v2/`+ options.value + api;
 
@@ -46,7 +46,7 @@ import '../sass/style.scss';
       }else{
         $('.nyt_logo').removeClass('nyt_2nd-position');
         $('.header_class').removeClass('header_2nd-position');
-        $('.footer2').addClass('footext').removeClass('footer2');
+        $('.footer_2nd-position').addClass('footer_text').removeClass('footer_2nd-position');
         $('.container').removeClass('load');
         $('.news_list').remove();
       }
