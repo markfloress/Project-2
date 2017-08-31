@@ -117,25 +117,20 @@
     margin-top: 0;
     }
   }
-}
 
-
-.selection_container{
-  width: 60%;
-  margin: 0 auto;
-  padding-top: 10px;
-
-  @include tablet{
-    width: 100%;
-  }
-}
-
-.select_options{
-  width: 140px;
-  height: 30px;
-
-  @include stretch{
-    // width: 100px;
+  .selection_container{
+    width: 60%;
+    margin: 0 auto;
+    padding-top: 10px;
+  
+    @include tablet{
+      width: 100%;
+    }
+  
+    .select_options{
+      width: 140px;
+      height: 30px;
+    }
   }
 }
 
