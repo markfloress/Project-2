@@ -21,8 +21,8 @@ The website grabs the current news using the API from the New York Times and gen
 
 <h3> Screenshots </h3>
 <p> Face of the website </p>
-![screencapture-file-users-mark-desktop-red-project02-index-html-1504208150214-min](https://user-images.githubusercontent.com/29613498/29942148-b75bcd72-8e49-11e7-8c21-c3383ec366bb.png)
+![instanews frontpage screenshot](https://user-images.githubusercontent.com/29613498/30040116-62e37990-918f-11e7-951f-05bbdba2dc60.png)
 
 <p> Site after a topic is chosen </p>
 <p> Do note that I took on a stretch goal for the project, which is to hide the article description on the face of the list and viewing it simply by hovering on the article you wanted to read</p>
-![screencapture-file-users-mark-desktop-red-project02-index-html-1504208174769-min](https://user-images.githubusercontent.com/29613498/29942151-b86a33de-8e49-11e7-85e3-6c122d3c1100.png)
+![instanews articles screenshot](https://user-images.githubusercontent.com/29613498/30040117-64d2c666-918f-11e7-8856-2588a785ed7b.png)
