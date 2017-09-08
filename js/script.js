@@ -4,8 +4,8 @@ import '../sass/style.scss';
 
 
   $(function() {
-  $('select').selectric();
-});
+    $('select').selectric();
+     });
 
   $( 'select' ).change(() => {
     $( 'select option:selected' ).each((key, options) => {
